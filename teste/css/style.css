@@ -88,10 +88,10 @@ hr {
     display: inline-block;
 }
 .seta img {
-    position: relative;
-    top: -150px;
+    top: 70%;
     width: 60px;
     padding-left: 90%;
+    height: auto;
 }
 
 .titulo p{
@@ -207,7 +207,7 @@ footer {
     margin-bottom: 20px;
     font-family: monospace;
  }
- #input1,#input2,#input3,#input4,#input5, textarea {
+ #nome, #responsavel, #cnpj, #telefone, #email, textarea {
     width: 100%;
     margin-bottom: 20px;
     padding: 7px;
