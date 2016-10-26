@@ -207,7 +207,7 @@ footer {
     margin-bottom: 20px;
     font-family: monospace;
  }
- #nome, #responsavel, #cnpj, #telefone, #email, textarea {
+ #nome, #responsavel, #cnpj, #telefone, #email, #input1, #input2, textarea {
     width: 100%;
     margin-bottom: 20px;
     padding: 7px;
