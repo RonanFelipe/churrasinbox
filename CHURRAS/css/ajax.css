@@ -1,0 +1,13 @@
+* {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+table, td, th, tr{
+	border-radius: 2px;
+}
+
+th {
+    background-color: #ff6600;
+    color: white;
+}

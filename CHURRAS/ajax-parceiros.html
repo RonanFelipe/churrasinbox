@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<link rel="stylesheet" type="text/css" href="css/ajax.css">
+	<script>
+		var xmlhttp = new XMLHttpRequest();
+		
+		function processarRequisicao() {
+			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				var a = JSON.parse (xmlhttp.responseText);
+				var str = "";
+				var num = a.restify.rows.length;
+				str = "<table border='2'><tr><th>ID</th><th>Responsavel</th><th>Nome</th><th>Telefone</th><th>Email</th><th>CNPJ</th></tr>"
+				for (j = 0; j < num; j++) {
+					str = str + "<tr><td>"+ a.restify.rows[j].values.id.value + "</td>"+ "<td>" + a.restify.rows[j].values.responsavel.value +"</td>"+ "<td>" + a.restify.rows[j].values.nome.value +"</td>"+ "<td>" + a.restify.rows[j].values.cnpj.value +"</td>"+ "<td>" + a.restify.rows[j].values.email.value +"</td>"+ "<td>" + a.restify.rows[j].values.tel.value +"</td></tr>";
+				}
+				str = str + "</table>"
+				document.getElementById("secao").innerHTML = str;
+			}
+		}
+		
+		function ExecutaAjax() {			
+			xmlhttp.onreadystatechange = processarRequisicao;
+			xmlhttp.open("GET", "http://www.smartsoft.com.br/webservice/restifydb/Employees/par_parceiro/?_view=json&_expand=yes", true);
+			xmlhttp.send();
+		}
+	</script>
+</head>
+<body>
+	<div id="secao">
+		<h2>PARCEIROS</h2>
+	</div>
+	<button type="button" onclick="ExecutaAjax()">Mostrar</button>
+</body>
+</html>
