@@ -4,8 +4,9 @@
   <link rel="icon" href="img/favicon.ico">
   <meta charset="UTF-8">
   <title>Churras InBox</title>
-  <!-- Aqui chamamos o nosso arquivo css externo -->
+  <!-- Aqui chamamos o nosso arquivo css e JavaScript externos -->
   <link rel="stylesheet" type="text/css"  href="css/style.css" />
+  <script type="text/javascript" src="js/Assinatura.js"></script>
 </head>
 <body>
   <header>
@@ -48,6 +49,22 @@
   <img class="balao1" src="img/balao1.png">
   
   <img class="balao2" src="img/balao.png">
+  
+  <BR>
+  <BR>   
+  <form name="Assinatura" method="POST" onSubmit="GravaAssinatura();">
+      <h2>Assinatura</h2>
+      <input id="nome" type="text" name="nome" placeholder="Nome">
+      <input id="email" type="email" name="email" placeholder="E-mail">
+      <input id="endereco" type="text" name="email" placeholder="Endereço">
+      <input id="cep" type="text" name="email" placeholder="CEP">
+      <input id="numero" type="number" name="email" placeholder="Nº">
+      <input id="numero_cartao" type="number" name="email" placeholder="Nº do Cartão">
+      <input id="vencimento" type="date" name="email" placeholder="Validade">
+      <input id="codigo_seguranca" type="number" name="email" placeholder="Código">    
+      <input type="submit" value="ENVIAR" id="boton">
+    </form>
+      <button onclick="consultaCEP();">Consulta CEP</button>
 
   <footer>
     <center>
