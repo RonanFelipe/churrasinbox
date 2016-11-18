@@ -281,26 +281,33 @@ footer {
   }
 
 #text-dicas {
+    margin: 10%;
     display: none;
 }
 
 #text-combinacoes {
+    margin: 10%;
     display: none;
 }
 #text-mod {
+    margin: 10%;
     display: none;
 }
 #text-carnes {
+    margin: 10%;
     display: none;
     text-align: left;
 }
 #text-receita{
+    margin: 10%;
     display: none;
 }
 #text-receita2{
+    margin: 10%;
     display: none;
 }
 #text-receita3{
+    margin: 10%;
     display: none;
 }
 #text-caixa{
